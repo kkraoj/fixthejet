@@ -4,7 +4,8 @@ Created on Sat Apr 14 10:47:23 2018
 @author: kkrao
 
 Works in Python 3. only. 
-Credits: 
+Credits: Carreau
+Code forked from https://github.com/Carreau/miscs/blob/master/Viridisify.ipynb
 """
 from __future__ import division
 import matplotlib.pyplot as plt
