@@ -23,14 +23,23 @@ Output file:
 
 ## Example 2
 
-`python fixthejet.py --input .\images\LaNina.png --output .\images\LaNina_inferno.png`
+`python fixthejet.py --input .\images\cube.png --output .\images\cube_plasma.png --colormap plasma` 
 Input file:
 
-![input2](images/LaNina.png)
+![input2](images/cube.png)
 Output file:
 
-![output2](images/LaNina_inferno.png)
+![output2](images/cube_plasma.png)
 
+## Example 3
+
+`python fixthejet.py --input .\images\cone.jpg --output .\images\cone_inferno.jpg --colormap inferno` 
+Input file:
+
+![input2](images/cone.jpg)
+Output file:
+
+![output2](images/cone_inferno.jpg)
 
 
 ## License
