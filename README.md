@@ -47,7 +47,7 @@ Python 3
 
 
 ## License
-* Do not own Copyright. Original works belongs to [Carreau](https://github.com/Carreau)
+* Do not own Copyright. Original work belongs to [Carreau](https://github.com/Carreau)
 
 ## Acknowledgments
 
