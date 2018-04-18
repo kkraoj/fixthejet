@@ -15,26 +15,33 @@ Python 3
 
 `python fixthejet.py --input .\images\SST.png --output .\images\SST_viridis.png`
 
-Input file:                |  Output file:
-![input1](images/SST.png) ![output1](images/SST_viridis.png)
+### Input file
+![input1](images/SST.png) 
+
+### Output file
+![output1](images/SST_viridis.png)
 
 ## Example 2
 
 `python fixthejet.py --input .\images\cube.png --output .\images\cube_plasma.png --colormap plasma` 
-Input file:
+
+### Input file
 
 ![input2](images/cube.png)
-Output file:
+
+### Output file
 
 ![output2](images/cube_plasma.png)
 
 ## Example 3
 
 `python fixthejet.py --input .\images\cone.jpg --output .\images\cone_inferno.jpg --colormap inferno` 
-Input file:
+
+### Input file
 
 ![input2](images/cone.jpg)
-Output file:
+
+### Output file
 
 ![output2](images/cone_inferno.jpg)
 
