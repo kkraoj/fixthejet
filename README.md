@@ -14,12 +14,9 @@ Python 3
 ## Example 1
 
 `python fixthejet.py --input .\images\SST.png --output .\images\SST_viridis.png`
-Input file:
-
-![input1](images/SST.png)
-Output file:
-
-![output1](images/SST_viridis.png)
+Input file:                |  Output file:
+:-------------------------:|:-------------------------:
+![input1](images/SST.png)  |  ![output1](images/SST_viridis.png)
 
 ## Example 2
 
