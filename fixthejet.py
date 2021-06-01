@@ -11,16 +11,14 @@ from __future__ import division
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.colors as colors
+from matplotlib import cm
 from scipy.spatial import cKDTree
-from ipywidgets import interact
+# from ipywidgets import interact
 import matplotlib.image as mpimg
 from matplotlib.ticker import NullLocator
 from PIL import Image
 from argparse import ArgumentParser
 
-
-COUT = 'viridis'
-d=0.2
 
 def build_parser():
     parser = ArgumentParser()
@@ -32,7 +30,7 @@ def build_parser():
             metavar='OUTPUT', required=True)
     parser.add_argument('--colormap', type=str,
             dest='cout', help='cout (default %(default)s)',
-            metavar='COUT', default=COUT)
+            metavar='COUT', default='viridis')
     return parser
 
 
@@ -46,15 +44,16 @@ def read_image(file_name):
     else:
         raise IOError('%s file format not supported. Try .jpg/.png'%file_name.rpartition('.')[-1])
     img = mpimg.imread(file_name, format = file_name[-3:])[:,:,:3]/divide_by
-    return d, img
+    return img
 
 
 #@interact(sub=(0, 500), d=(0,1,0.05))
-def convert_image(img, d,  cout, sub=256, cin='jet',):
+def convert_image(img, cout, d=0.2,sub=256, cin='jet'):
     
     viridis = plt.get_cmap(cout)
     jet = plt.get_cmap(cin)
-    jet256 = colors.makeMappingArray(sub, jet)[:, :3]
+    jet256 = jet(range(sub))[:, :3]
+    # jet256 = colors.makeMappingArray(sub, jet)[:, :3] #deprecated 3.2.1 onwards
     K = cKDTree(jet256)
     oshape = img.shape
     img_data = img.reshape((-1,3))
@@ -80,11 +79,10 @@ def main():
     parser = build_parser()
     options = parser.parse_args()
     try:
-        d, img = read_image(options.input)
+        img = read_image(options.input)
     except:
         raise IOError('%s does not exist'%options.input)
-    img, blend = convert_image(img = img, d = d,cin = 'jet', \
-                               cout = options.cout)
+    img, blend = convert_image(img = img, cout = options.cout,cin = 'jet')
     try:
         save_image(blend, options.output)
     except:
