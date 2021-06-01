@@ -6,6 +6,8 @@ Information can be transformed into knowledge by consuming it in a way to unders
 
 This script allows you to change an image (.jpg/.png) file made with _jet_ colormap to any other colormap of your choice. The script selectively changes _jet_ colors only. All others colors in the image remain unchanged (including background and text). 
 
+## Installation
+`git clone https://github.com/kkraoj/fixthejet.git`
 
 ## Running
 
@@ -13,7 +15,7 @@ This script allows you to change an image (.jpg/.png) file made with _jet_ color
 
 Use `--colormap <output colormap>` to control colormap of outfile. Default is _viridis_. Only Matplotlib colormaps supported. 
 
-### Prerequisites
+## Prerequisites
 
 Python 3
 
