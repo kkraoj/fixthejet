@@ -11,7 +11,9 @@ This script allows you to change an image (.jpg/.png) file made with _jet_ color
 Type the following in terminal or command line. 
 
 `git clone https://github.com/kkraoj/fixthejet.git`
+
 `cd fixthejet`
+
 `pip install -r requirements.txt`
 
 ## Running
